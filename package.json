@@ -1,0 +1,20 @@
+{
+  "name": "rocketshoes",
+  "description": "Ecommerce de tênis.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "repository": "git@github.com:hugo-marcelo/rocketshoes.git",
+  "author": "Hugo Marcelo <hugomarcelo91@gmail.com>",
+  "scripts": {
+    "start:web": "concurrently --kill-others \"json-server server.json -p 3333\" \"yarn workspace @rocketshoes/web start\"",
+    "start:mobile": "concurrently --kill-others \"json-server server.json -p 3333\" \"yarn workspace @rocketshoes/mobile start\"",
+    "start": "concurrently --kill-others \"json-server server.json -p 3333\" \"yarn workspace @rocketshoes/web start\" \"yarn workspace @rocketshoes/mobile start\""
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
