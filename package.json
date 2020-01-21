@@ -7,14 +7,19 @@
   "repository": "git@github.com:hugo-marcelo/rocketshoes.git",
   "author": "Hugo Marcelo <hugomarcelo91@gmail.com>",
   "scripts": {
-    "start:web": "concurrently --kill-others \"json-server server.json -p 3333\" \"yarn workspace @rocketshoes/web start\"",
-    "start:mobile": "concurrently --kill-others \"json-server server.json -p 3333\" \"yarn workspace @rocketshoes/mobile start\"",
-    "start": "concurrently --kill-others \"json-server server.json -p 3333\" \"yarn workspace @rocketshoes/web start\" \"yarn workspace @rocketshoes/mobile start\""
+    "start:web": "concurrently --kill-others \"npx json-server server.json -p 3333\" \"yarn workspace @rocketshoes/web start\"",
+    "start:mobile": "concurrently --kill-others \"npx json-server server.json -p 3333\" \"yarn workspace @rocketshoes/mobile start\"",
+    "start": "concurrently --kill-others \"npx json-server server.json -p 3333\" \"yarn workspace @rocketshoes/web start\" \"yarn workspace @rocketshoes/mobile start\""
   },
   "workspaces": [
     "packages/*"
   ],
+  "dependencies": {
+    "react-native": "0.61.3"
+  },
   "devDependencies": {
+    "@types/react": "16.9.11",
+    "@types/react-native": "0.60.22",
     "concurrently": "^5.0.2"
   }
 }

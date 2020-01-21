@@ -3,6 +3,12 @@ import colors from '../../styles/colors';
 
 import logo from '../../assets/images/logo.png';
 
+export const Wrapper = styled.SafeAreaView`
+  flex: 0;
+  background: ${colors.dark};
+  flex-direction: row;
+`;
+
 export const Container = styled.View`
   flex-direction: row;
   justify-content: space-between;
